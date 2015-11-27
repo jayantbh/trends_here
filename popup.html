@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trends Here!</title>
+    <script src="js/lib.js"></script>
+    <script src="js/popup.js"></script>
+
+    <style>
+        *{
+            font-family: sans-serif;
+        }
+        html,body,iframe{
+            background-color: #fff;
+            border: none;
+        }
+        iframe{
+            margin-top: 10px;
+            height: 330px;
+            width: 500px;
+        }
+        .nterms *{
+            outline: none;
+            margin-bottom: 3px;
+            margin-left: 3px;
+        }
+        .nterms .nterm{
+            padding: 3px 5px;
+            border: 2px solid;
+            display: inline-block;
+            vertical-align: top;
+            line-height: 1rem;
+            cursor: pointer;
+        }
+        .nterms .add-nterm{
+            font-weight: bold;
+            margin-left: 4px;
+            font-size: 1.4rem;
+            height: 1.4rem;
+            padding: 0;
+        }
+        .nterms .add-nterm #new-nterm{
+            margin: 0 0 0 2px;
+            border: 0;
+            border-bottom: 2px solid;
+            border-bottom-color: inherit;
+        }
+        .nterms .add-nterm #new-nterm-icon{
+            line-height: 1.4rem;
+            vertical-align: bottom;
+            padding-right: 6px;
+        }
+        .nterms .nterm:nth-child(1){
+            border-color: rgb(63, 133, 242);
+            color: rgb(63, 133, 242);
+        }
+        .nterms .nterm:nth-child(2){
+            border-color: rgb(219, 68, 55);
+            color: rgb(219, 68, 55);
+        }
+        .nterms .nterm:nth-child(3){
+            border-color: rgb(244, 180, 0);
+            color: rgb(244, 180, 0);
+        }
+        .nterms .nterm:nth-child(4){
+            border-color: rgb(15, 157, 88);
+            color: rgb(15, 157, 88);
+        }
+        .nterms .nterm:nth-child(5){
+            border-color: rgb(126, 55, 148);
+            color: rgb(126, 55, 148);
+        }
+        .nterms .nterm:nth-child(6){
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Trends Here!</h1>
+    <p class="selection"></p>
+    <div class="nterms">
+        <span class="nterm add-nterm">
+            <input id="new-nterm" placeholder="Enter upto 5 terms" type="text"/>
+            <span id="new-nterm-icon">+</span>
+        </span>
+    </div>
+    <div id="ngram-graph"></div>
+</body>
+</html>
